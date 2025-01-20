@@ -1,0 +1,9 @@
+.main-preview {
+  display: flex;
+  flex-direction: column;
+}
+
+#preview-container-id {
+  --variable-font-text: "sans serif";
+  --variable-font-title: "sans serif";
+}

@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: 50ms;
+
+  & > .left {
+    height: 100%;
+    width: 100%;
+    padding: 4% 4%;
+  }
+
+  & > .right {
+    height: 100%;
+    width: 100%;
+    padding: 4% 4%;
+  }
+}
+
+@media (min-width: 1248px) {
+  .main-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  & > .left {
+    flex-basis: 50%;
+  }
+
+  & > .right {
+    flex-basis: 50%;
+  }
+}
