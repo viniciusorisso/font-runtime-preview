@@ -5,37 +5,31 @@
 
 .main-container {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  flex-direction: column-reverse;
   width: 100vw;
   overflow: hidden;
   transition: 50ms;
+  font-family: 'Courier New', Courier, monospace;
 
   & > .left {
     height: 100%;
-    width: 100%;
     padding: 4% 4%;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   & > .right {
     height: 100%;
-    width: 100%;
     padding: 4% 4%;
   }
 }
 
-@media (min-width: 1248px) {
+@media (min-width: 1024px) {
   .main-container {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    height: 100vh;
   }
 
-  & > .left {
-    flex-basis: 50%;
-  }
-
-  & > .right {
-    flex-basis: 50%;
-  }
 }

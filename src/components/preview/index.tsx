@@ -1,5 +1,6 @@
 import TextComponent from "./text";
 import TitleComponent from "./title";
+import "./style.css";
 
 const FontPreview = () => {
   return <div className="main-preview" id="preview-container-id">

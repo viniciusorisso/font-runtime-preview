@@ -1,3 +1,8 @@
 .text-font {
   font-family: var(--variable-font-text);
+  line-height: var(--variable-font-text-line-heigth);
+  letter-spacing: var(--variable-font-text-letter-space);
+  font-size: var(--variable-font-text-font-size);
+  word-break: break-all;
+  word-wrap: break-word;
 }

@@ -1,5 +1,4 @@
 import FormGroup from "./form-group";
-
 const FormFont = () => {
   return <div>
     <h2>Fonts</h2>

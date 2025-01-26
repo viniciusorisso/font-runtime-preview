@@ -1,4 +1,8 @@
 .title-font {
+  font-size: var(--variable-font-title-font-size);
   font-family: var(--variable-font-title);
-  font-size: 32px;
+  line-height: var(--variable-font-title-line-heigth);
+  letter-spacing: var(--variable-font-title-letter-space);
+  word-break: break-all;
+  word-wrap: break-word;
 }

@@ -1,0 +1,17 @@
+.select-component {
+  width: 100%;
+  cursor: pointer;
+  height: 2rem;
+  padding: 0 0.5rem;
+  
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 600px) {
+  .select-component {
+    width: 16.25rem; 
+  }
+}

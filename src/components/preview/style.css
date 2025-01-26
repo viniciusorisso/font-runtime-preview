@@ -1,9 +1,16 @@
 .main-preview {
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
 }
 
 #preview-container-id {
-  --variable-font-text: "sans serif";
-  --variable-font-title: "sans serif";
+  --variable-font-text: "Courier New", Courier, monospace;;
+  --variable-font-text-line-heigth: 1;
+  --variable-font-text-letter-space: 0;
+  --variable-font-text-font-size: 16px;
+  --variable-font-title: "Courier New", Courier, monospace;;
+  --variable-font-title-line-heigth: 1;
+  --variable-font-title-letter-space: 0;
+  --variable-font-title-font-size: 32px;
 }
