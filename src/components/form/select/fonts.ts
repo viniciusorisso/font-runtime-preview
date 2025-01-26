@@ -1,3 +1,15 @@
+export type TFont = {
+  family: string;
+  variants: string[];
+  subsets: string[];
+  version: string;
+  lastModified: string;
+  files: Record<string, string | undefined>;
+  category: string;
+  kind: string;
+  menu: string;
+};
+
 const GOOGLE_FONTS_LIST = () => ([
   {
     "family": "Roboto",

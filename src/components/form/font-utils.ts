@@ -1,16 +1,4 @@
-import { GOOGLE_FONTS_LIST } from "./select/fonts";
-
-type TFont = {
-  family: string;
-  variants: string[];
-  subsets: string[];
-  version: string;
-  lastModified: string;
-  files: Record<string, string | undefined>;
-  category: string;
-  kind: string;
-  menu: string;
-};
+import { GOOGLE_FONTS_LIST, TFont } from "./select/fonts";
 
 const fonts: TFont[] = GOOGLE_FONTS_LIST();
 

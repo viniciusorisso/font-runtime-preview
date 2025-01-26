@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import { changeCurrentFont, changeCurrentWeight, changeToCustomFont, fontsList } from "../font-utils";
-import SelectComponent from "../select";
+import SelectComponent from "../select/index";
 import "./style.css";
 
 type TComponentProps = {
@@ -29,14 +29,14 @@ const FormGroup = ({ label, fontIdString }: TComponentProps) => {
     
     setCurrentFont(() => index ?? 0);
 
-    const node = document.getElementById("file-input");
+    const node = document.getElementById("file-input") as HTMLInputElement;
 
     if (node?.value) {
       node.value = "";
     }
   };
 
-  const handleChangeWeight = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeWeight = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const selected = event.target.value;
 
     changeCurrentWeight(selected, currentFont, fontIdString);

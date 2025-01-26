@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import "./style.css";
 import { useEffect } from "react";
 
-const SelectComponent = ({ onChange, list, selected, clearSelect }) => {
+
+type TComponentProps = {
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  list: Array<{ name: string }>;
+  selected?: boolean;
+  clearSelect?: boolean;
+};
+
+const SelectComponent = ({ onChange, list, selected, clearSelect }: TComponentProps) => {
   const [currentValue, setCurrentValue] = useState(selected ? list[0].name : "");
 
-  const handleOnChange = (event) => {
+  const handleOnChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setCurrentValue(event.target.value);
 
     onChange(event);
@@ -24,7 +32,7 @@ const SelectComponent = ({ onChange, list, selected, clearSelect }) => {
   return <select value={currentValue} className="select-component" onChange={handleOnChange}>
       <option disabled value=""> -- Select an option -- </option>
       {
-        list.map((element) => <option key={element.name} value={element.name}>{element.name}</option>)
+        list.map((element: { name: string }) => <option key={element.name} value={element.name}>{element.name}</option>)
       }
     </select>
 };
