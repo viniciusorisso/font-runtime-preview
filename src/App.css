@@ -11,14 +11,14 @@
   transition: 50ms;
   font-family: 'Courier New', Courier, monospace;
 
-  & > .left {
+  & > .right {
     height: 100%;
     padding: 4% 4%;
     overflow-y: scroll;
     overflow-x: hidden;
   }
 
-  & > .right {
+  & > .left {
     height: 100%;
     padding: 4% 4%;
   }

@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <div className="main-container">
-        <section className="right">
+        <section className="left">
           <FormFont />
         </section>
-        <section className="left">
+        <section className="right">
           <FontPreview />
         </section>
       </div>
