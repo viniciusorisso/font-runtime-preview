@@ -31,7 +31,7 @@ const FormGroup = ({ label, fontIdString }: TComponentProps) => {
 
     const node = document.getElementById("file-input");
 
-    if (node.value) {
+    if (node?.value) {
       node.value = "";
     }
   };

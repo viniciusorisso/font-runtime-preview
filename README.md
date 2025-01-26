@@ -1,50 +1,99 @@
-# React + TypeScript + Vite
+# Runtime Font Changer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application demonstrating how to implement a runtime font changer. The app allows users to dynamically change fonts and styles in real-time using a curated list of fonts or by uploading custom fonts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Select a font from a predefined list (e.g., Google Fonts).
+- Upload and apply a custom font.
+- Adjust font weight, size, line height, and letter spacing.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Frontend framework.
+- **Vite**: Development server and build tool for blazing-fast development.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation and Setup
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Follow these steps to install and run the project locally:
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (version 16 or above is recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+   ```
+
+2. **Install dependencies:**
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   OR using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Run the development server:**
+   Using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+   OR using yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+4. **Access the application:**
+   Open your browser and navigate to:
+   ```
+   http://localhost:5173
+   ```
+   > Note: Vite uses the default port `5173`. If it's already in use, Vite will assign a different port and display it in the terminal.
+
+## Usage
+
+1. Select a font from the dropdown to apply it to the text.
+2. Upload a custom font file (.ttf or .woff2) to use your own font.
+3. Adjust font properties like weight, size, line height, and letter spacing using the available inputs.
+
+## Project Structure
+
+```
+root/
+├── src/
+│   ├── components/
+│   │   ├── form/               # Handles font customization inputs
+│   │   ├── preview/            # Display the font preview
+│   ├── font-utils.ts           # Font manipulation logic
+│   ├── App.tsx                 # Main application file
+│   ├── index.tsx               # Application entry point
+├── public/
+│   ├── fonts/                  # Example font files (if any)
+├── vite.config.ts              # Vite configuration
+├── package.json                # Project metadata and dependencies
+└── README.md                   # Project documentation
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contributing
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Contributions are welcome! If you'd like to improve the project, feel free to fork the repository and submit a pull request.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## License
+
+This project is licensed under the [MIT License](LICENSE).
